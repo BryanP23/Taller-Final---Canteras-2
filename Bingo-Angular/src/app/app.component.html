@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Virtual</title>
+    <style>
+      table,th,td {
+        border:0.5px solid black;
+        
+        
+      }
+
+      th, td {
+        padding: 10px;
+        text-align: center;
+      }
+      th{
+        background-color:rgb(50, 135, 174)
+      }
+      td{
+        background-color:beige
+      }
+      table{
+        margin: 0 auto;
+        margin-top: 50px;
+      }
+      h1, h2{
+        color:rgb(8, 8, 8);
+        margin-top: 20px;
+        padding-top: 20px;
+        text-align: center;
+      }
+      button{
+        color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #318aac;
+  position: relative;
+  border: 2px solid #318aac;
+  outline: 1px solid;
+  outline-color: rgba(49, 138, 172, 0.4);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  margin-top: 20px;
+  margin-left: 80px;
+  border-radius: 6em;
+
+      }
+      button:hover {
+        box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+  
+
+      }
+      div{
+        text-align: center;
+      }
+      body{
+        background-image: url("https://thumbs.dreamstime.com/b/fondo-beige-83295720.jpg");
+      }
+    </style>
+</head>
+<body>
+  <h1>El Gran Buda - Casa de Apuestas</h1>
+  <h2>Bingo Virtual</h2>
+  
+
+    
+  <table>
+    <tr>
+      <td>Balota: {{balota}}</td>
+    </tr>
+  </table>
+    
+  <table id="bingo" style="width: 60%;"> 
+    
+        <tr>
+            <th>B</th>
+            <th>I</th>
+            <th>N</th>
+            <th>G</th>
+            <th>O</th>
+        </tr>
+        <tr>
+          <td id= '{{"b-"+tablero["b"][0]}}'>{{tablero['b'][0]}}</td>
+          <td id= '{{"i-"+tablero["i"][0]}}'>{{tablero['i'][0]}}</td>
+          <td id= '{{"n-"+tablero["n"][0]}}'>{{tablero['n'][0]}}</td>
+          <td id= '{{"g-"+tablero["g"][0]}}'>{{tablero['g'][0]}}</td>
+          <td id= '{{"o-"+tablero["o"][0]}}'>{{tablero['o'][0]}}</td>
+        </tr>
+        <tr>
+          <td id= '{{"b-"+tablero["b"][1]}}'>{{tablero['b'][1]}}</td>
+          <td id= '{{"i-"+tablero["i"][1]}}'>{{tablero['i'][1]}}</td>
+          <td id= '{{"n-"+tablero["n"][1]}}'>{{tablero['n'][1]}}</td>
+          <td id= '{{"g-"+tablero["g"][1]}}'>{{tablero['g'][1]}}</td>
+          <td id= '{{"o-"+tablero["o"][1]}}'>{{tablero['o'][1]}}</td>
+        </tr>
+        <tr>
+          <td id= '{{"b-"+tablero["b"][2]}}'>{{tablero['b'][2]}}</td>
+          <td id= '{{"i-"+tablero["i"][2]}}'>{{tablero['i'][2]}}</td>
+          <td id= '{{"n-"+tablero["n"][2]}}'>{{tablero['n'][2]}}</td>
+          <td id= '{{"g-"+tablero["g"][2]}}'>{{tablero['g'][2]}}</td>
+          <td id= '{{"o-"+tablero["o"][2]}}'>{{tablero['o'][2]}}</td>
+        </tr>
+      
+    </table>
+
+  <div>
+    <button (click)="getBalota()">Tirar Balota</button>
+    <button (click)="getTablero()">Generar Carton de Juego</button>
+  </div>
+      
+    
+</body>
+</html>
