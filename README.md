@@ -22,3 +22,6 @@ Antes de Empezar ten en cuenta lo siguiente:
 2) Luego dale a Tirar Balota
 3) Al tirar la bolata el programa verificara si se encuentra en tu carton de juego y si es asi la marcara de color amarillo.
 4) Al completar todo el tablero, Ganaras la partida.
+
+**Link del Video**
+https://www.youtube.com/watch?v=7t9kINIekEk&ab_channel=BryanPolo
