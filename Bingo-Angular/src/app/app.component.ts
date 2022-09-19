@@ -18,6 +18,7 @@ export class AppComponent {
   tablero: any = {"b":["14","15","12"],"i":["30","28","30"],"g":["68","64","64"],"n":["46","49","48"],"o":["76","80","87"]};
   letras = Object.keys(this.tablero);
   numeros = Object.values(this.tablero);
+  aciertos: number = 0;
    getBalota():void {
   /**
    * 1. Llamar el servicio
@@ -28,6 +29,9 @@ export class AppComponent {
       this.balota = response.balota;
       this.findNumber(this.balota);
     });
+    if (this.aciertos == 15) {
+      window.alert("Has Ganado, Felicitaciones!!!");
+    }
 
 
   }
@@ -44,8 +48,9 @@ export class AppComponent {
     var celda = document.getElementById(number);
     if(celda != null){
       celda.style.backgroundColor = 'yellow'; 
-      console.log(celda);
-      console.log(number);
+      this.aciertos = this.aciertos + 1;
+      console.log(celda)
+      console.log(number)
     }
 
 }

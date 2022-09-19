@@ -35,9 +35,12 @@ public class Tablero {
     public List<String> GenerateRows(int max, int min){
         ArrayList<String> numbers = new ArrayList<String>();
         Random random = new Random();
-        for (int i = 0; i<3; i++){
-         n =  (random.nextInt(max - min) + min);
-         numbers.add(Integer.toString(n));
+        while (numbers.size() < 3){
+            n =  (random.nextInt(max - min) + min);
+            if (numbers.contains(Integer.toString(n))){
+                continue;
+            }
+            numbers.add(Integer.toString(n));
         }
         return numbers;
     }
